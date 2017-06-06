@@ -15,6 +15,6 @@ $("#back").click(function () { ... } ) : Cancella l' ultima cifra inserita;
 
 $("#ctutto").click(function () { ... } ) : Resetta la calcolatrice;
 
-$("#uguale").click(function () { .. } ) : Svolge l' operazione indicata dal <b>operatore</b> tra i due numeri;
+$("#uguale").click(function () { ... } ) : Svolge l' operazione indicata dal <b>operatore</b> tra i due numeri;
 
 ____________________________________________________________________  
