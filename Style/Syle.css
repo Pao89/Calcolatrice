@@ -1,0 +1,133 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10-mag-2017, 16.57.44
+    Author     : paolo
+*/
+
+#nome {
+    display : block;
+    text-align: left;
+    padding-left: 9px;
+    font-family: "serif", Trebuchet MS;
+    color : white !important;
+    font-style : Italic;
+}
+
+body {
+    background-color: white;
+}
+
+#sfondo {
+    display : box;
+    margin : auto;
+    margin-top : 50px;
+    width : 28%;
+    padding : 25px;
+    padding-top: 10px;
+    border : 3px solid gray;
+    border-radius : 25px;
+    background: repeating-linear-gradient(
+        45deg,
+        #242022,
+        #242022 50px,
+        #a69ba0 50px,
+        #a69ba0 100px
+        );
+}
+
+#visore {
+    border : 3px solid gray;
+    display : box;
+    margin : 10px;
+    margin-bottom: 30px;
+    background-color : whitesmoke;
+    text-align: left;
+    padding-left : 15px;
+    font-weight: bold; 
+}
+
+button {
+    font-family: "serif", Consolas;
+    font-style: Italic;
+    font-size : 16px;
+    padding: 1.2vw 2.2vw;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+    background-color : #e8e8e8;
+    overflow : hidden;
+    margin-top : 5px;
+}
+
+button:focus 
+{
+    outline:0;
+}
+
+.button:active {
+    background-color : #d5d5d5;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color : #d5d5d5;
+    cursor : pointer;
+}
+
+#ctutto {
+    margin-left : 5px;
+	padding : 1.2vw 3.5vw;
+}
+
+#ctutto:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19) !important;
+    background-color : red !important;
+}
+
+#back {
+    margin-left : 5px;
+	padding : 1.2vw 3.5vw;
+}
+
+#back:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19) !important;
+    background-color : crimson !important;
+}
+
+#back span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+#back:hover span {
+    padding-right : 25px;
+}
+
+#back:hover span:after{
+    opacity: 1;
+    right: 0;
+}
+
+#back span:after {
+    content: '\00ab';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+#uguale:hover {
+	background-color : #cbe2bc;
+}
+
+.operatore:hover {
+	background-color : #89f6ff;
+}
