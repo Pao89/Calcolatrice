@@ -12,26 +12,6 @@ var numVirgoleMax = 10;
 var lungNum = 25;
 var operatori = [];
 
-function segnoConditions(campo) {
-    var possibile = true;
-    if (campo.lastIndexOf("+") === campo.length - 1) {
-        possibile = false;
-    }
-    if (campo.lastIndexOf("-") === campo.length - 1) {
-        possibile = false;
-    }
-    if (campo.lastIndexOf("*") === campo.length - 1) {
-        possibile = false;
-    }
-    if (campo.lastIndexOf("/") === campo.length - 1) {
-        possibile = false;
-    }
-    if (campo.length === 0) {
-        possibile = false;
-    }
-    return possibile;
-}
-
 function nextSegno(campo) {
     var possegno;
     var segnotrovato = false;
@@ -47,7 +27,7 @@ function nextSegno(campo) {
 $(document).ready(function () {
 
     $(".numero").click(function () {
-        visore.length<lungNum? visore += this.innerHTML:null;
+        visore.length < lungNum ? visore += this.innerHTML : null;
         visore.indexOf('.') !== -1 && numVirgole < numVirgoleMax ? numVirgole++ : null;
         $("#campo").html(visore);
     });
@@ -153,16 +133,19 @@ $(document).ready(function () {
             inserito = true;
         }
         var risultato;
-        for (i = 0; i <= operatori.length; i++) {
-            switch (operatori[i]) {
-                case "+":
-                    numeri[i + 1] += numeri[i];
-                    console.log(numeri, 'num');
-                    break;
-                case "-":
-                    numeri[i + 1] = numeri[i] - numeri[i + 1];
-                    console.log(numeri, 'num');
-                    break;
+        operatori.length == numeri.length ? operatori.pop() : null;
+        if (numeri.length > 1) {
+            for (i = 0; i <= operatori.length; i++) {
+                switch (operatori[i]) {
+                    case "+":
+                        numeri[i + 1] += numeri[i];
+                        console.log(numeri, 'num');
+                        break;
+                    case "-":
+                        numeri[i + 1] = numeri[i] - numeri[i + 1];
+                        console.log(numeri, 'num');
+                        break;
+                }
             }
         }
         if (numVirgole == 0) {
